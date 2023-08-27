@@ -1,1 +1,34 @@
-<p>header works!</p>
+<div class="head" [ngClass]="getHeadClass()">
+   <div class="head-content">
+    <div class="head-content-left">
+        <div class="search-container">
+            <div class="normal-search">
+                <input type="search" 
+                    class="search" name="" id=""
+                    placeholder="Search..."
+                >
+                <i class="bi bi-search"></i>
+            </div>
+        </div>
+    </div>
+    <div class="head-content-right">
+        <div class="head-menu">
+            <div class="head-menu-item">
+                <button class="head-menu-item-btn ripple">
+                    <i class="bi bi-bell-fill"></i>
+                </button>
+            </div>
+            <div class="head-menu-item">
+                <button class="head-menu-item-btn ripple">
+                    <i class="bi bi-chat-left-text-fill"></i>
+                </button>
+            </div>
+        </div>
+        <div class="head-user-avatar-container">
+            <div class="head-user-avatar">
+                <img src="../../assets/user.jpg" alt="User" class="user-avatar">
+            </div>
+        </div>
+    </div>
+   </div>
+</div>
