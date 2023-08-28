@@ -35,13 +35,13 @@ export  const navbarData = [
         label: 'Facility'
     },
     {
-        routeLink: 'settings',
-        icon: 'bi bi-gear-fill',
-        label: 'Settings'
-    },
-    {
         routeLink: 'message',
         icon: 'bi bi-chat-quote-fill',
         label: 'Message'
+    },
+    {
+        routeLink: 'settings',
+        icon: 'bi bi-gear-fill',
+        label: 'Settings'
     },
 ];

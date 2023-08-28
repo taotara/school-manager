@@ -5,19 +5,140 @@
     z-index: 1;
     transition: all .5s ease;
     background: #fff;
-    padding: 1rem 1.5rem 0 1.5rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
     position: fixed;
     top: 0;
     /* box-shadow:  0px 0px 6px 0px rgba(0, 0, 0, 0.07); */
-    box-shadow: 8px 8px 17px -13px rgba(0,0,0,0.75);
+    box-shadow: 8px 1px 17px -13px rgba(0,0,0,0.75);
 }
 
+.head-content {
+    padding: 0.813rem 1.563;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.search-container {
+    position: relative;
+}
+
+.normal-search .search {
+    border: none;
+    height: 50px;
+    padding-left: 2.5rem;
+    padding-right: 1.25rem;
+    /* padding-top: 2rem;
+    padding-bottom: 2rem; */
+    background-color: #f9f9f9;
+    box-shadow: none;
+    border-radius: 25px;
+    outline: 0;
+}
+
+.normal-search i {
+    position: absolute;
+    font-size: 1rem;
+    line-height: 2.375rem;
+    left: 0.813rem;
+    top: 0.5rem;
+    color: #7e7e7e;
+}
+
+.head-content-right {
+    display: flex;
+    align-items: center;
+}
+
+.head-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1.25rem;
+}
+
+.head-menu-item-btn {
+    background-color: #F9F9F9;
+    font-size: 18px;
+    color: #0977D0;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin-left: 8px;
+    outline: 0;
+    position: relative;
+}
+
+.badge {
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+    border: 1px solid #fff;
+    background-color: #0977D0;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    right: -3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head-menu-item-btn:hover,
+.head-menu-item-btn:focus {
+    background-color: #0977D0;
+    color: #fff;
+}
+
+.head-user-avatar-container {
+    margin-left: 20px;
+    background: #f9f9f9;
+    padding: 5px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.head-user-avatar {
+    position: relative;
+}
+
+.user-avatar {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.head-user-details {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.head-user-name h4 {
+    font-size: 16px;
+}
+
+.head-user-designation h6 {
+    font-size: 13px;
+    font-weight: 300;
+    color: #89879F;
+    margin-top: -8px;
+}
+
+.caret {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
 
 .head-trimmed {
     width: calc(100% - 18.8rem);
     margin-left: 18.8rem;
 }
+
+
 
 .head-md-screen {
     width: calc(100% - 5rem);

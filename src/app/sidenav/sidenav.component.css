@@ -1,5 +1,5 @@
 .sidenav {
-    background: #fff;
+    background: #0977D0;
     transition: all .5s ease;
     position: fixed;
     z-index: 1;
@@ -31,7 +31,7 @@
     margin-left: 0.2rem;
     font-size: 15px;
     font-weight: 600;
-    color: #053559;
+    color: #fff;
     display: block;
 }
 
@@ -45,9 +45,7 @@
 }
 
 .btn-close i {
-    color: red;
     font-size: 12px;
-
 }
 
 .sidenav-collapsed {
@@ -58,6 +56,7 @@
     list-style: none;
     padding: 0.938rem;
     margin: 0;
+    margin-top: 2.4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,7 +73,7 @@
     display: flex;
     align-items: center;
     height: 3rem;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     /* padding: 0 5px 0 5px; */
     transition: all .3s ease;
@@ -93,15 +92,15 @@
 }
 
 .sidenav-nav-item:hover .sidenav-nav-link {
-    background-color: #0977D0;
+    background-color: #fff;
     border-radius: 25px;
-    color: #fff;
+    color: #0977D0;
 }
 
 a.active {
-    background-color: #0977D0;
+    background-color: #fff;
     border-radius: 25px;
-    color: #fff;
+    color: #0977D0;
 }
 
 /* .active .sudenav-link-icon, .sidenav-link-text {
