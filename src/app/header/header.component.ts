@@ -9,6 +9,12 @@ export class HeaderComponent {
   @Input() collapsed = false;
   @Input() screenWidth = 0;
 
+  canShowSearchAsOverlay = false;
+
+  ngOnInit(): void {
+    this.checkCanShowSearchAsOverlay(window.innerWidth);
+  }
+
   getHeadClass(): string {
     let styleClass = '';
     if(this.collapsed && this.screenWidth > 768) {
@@ -17,5 +23,13 @@ export class HeaderComponent {
       styleClass = 'head-md-screen';
     }
     return styleClass;
+  }
+
+  checkCanShowSearchAsOverlay(innerWidth: number): void {
+    if(innerWidth < 845) {
+      this.canShowSearchAsOverlay = true;
+    } else {
+      this.canShowSearchAsOverlay = false;
+    }
   }
 }
