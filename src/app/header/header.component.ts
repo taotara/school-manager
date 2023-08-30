@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +10,11 @@ export class HeaderComponent {
   @Input() screenWidth = 0;
 
   canShowSearchAsOverlay = false;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkCanShowSearchAsOverlay(window.innerWidth);
+  }
 
   ngOnInit(): void {
     this.checkCanShowSearchAsOverlay(window.innerWidth);
