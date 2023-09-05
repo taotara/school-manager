@@ -35,7 +35,7 @@
     display: block;
 }
 
-.btn-close {
+.close-btn {
     margin-left: auto;
     cursor: pointer;
     width: 1.5rem;
@@ -44,8 +44,9 @@
     border: none;
 }
 
-.btn-close i {
-    font-size: 12px;
+.close-btn i {
+    font-size: 25px;
+    color: white;
 }
 
 .sidenav-collapsed {

@@ -1,4 +1,6 @@
 import { Component, HostListener, Input } from '@angular/core';
+import { notifications } from './header-dummy-data';
+import { userItems } from './header-dummy-data';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +12,9 @@ export class HeaderComponent {
   @Input() screenWidth = 0;
 
   canShowSearchAsOverlay = false;
+
+  notifications = notifications;
+  userItems = userItems;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {

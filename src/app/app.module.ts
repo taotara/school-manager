@@ -20,6 +20,7 @@ import { HeaderComponent } from './header/header.component';
 
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CdkMenuModule } from '@angular/cdk/menu';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -37,15 +38,16 @@ import { CdkMenuModule } from '@angular/cdk/menu';
     FacilityComponent,
     SettingsComponent,
     MessageComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     OverlayModule,
-    CdkMenuModule
+    CdkMenuModule,
+    NgxChartsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

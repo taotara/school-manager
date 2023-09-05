@@ -2,8 +2,8 @@
     <div class="logo-container">
         <button class="logo" (click)="toggleCollapse()"><img src="assets/logo2.png" alt="Logo"></button>
         <div class="logo-text" *ngIf="collapsed">SCHOOL MANAGER</div>
-        <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav()">
-            <!-- <i class="bi bi-x-lg"></i> -->
+        <button class="close-btn" *ngIf="collapsed" (click)="closeSidenav()">
+            <i class="bi bi-x-lg"></i>
         </button>
     </div>
     <ul class="sidenav-nav">
