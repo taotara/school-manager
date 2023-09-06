@@ -20,7 +20,10 @@ import { HeaderComponent } from './header/header.component';
 
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CdkMenuModule } from '@angular/cdk/menu';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgChartsModule } from 'ng2-charts';
+import 'chartjs-adapter-date-fns';
+import { TeacherInformationComponent } from './teacher-information/teacher-information.component';
 
 @NgModule({
   declarations: [
@@ -39,13 +42,15 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     SettingsComponent,
     MessageComponent,
     HeaderComponent,
+    TeacherInformationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     OverlayModule,
     CdkMenuModule,
-    NgxChartsModule,
+    BrowserAnimationsModule,
+    NgChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

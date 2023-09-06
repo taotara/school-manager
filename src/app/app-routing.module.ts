@@ -9,10 +9,14 @@ import { FleetComponent } from './fleet/fleet.component';
 import { FacilityComponent } from './facility/facility.component';
 import { SettingsComponent } from './settings/settings.component';
 import { MessageComponent } from './message/message.component';
+import { StudentInformationComponent } from './student-information/student-information.component';
+import { TeacherInformationComponent } from './teacher-information/teacher-information.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   {path: 'dashboard', component: DeashboardComponent},
+  {path: 'student-info', component: StudentInformationComponent},
+  {path: 'teacher-info', component: TeacherInformationComponent},
   {path: 'staff-info', component: StaffInformationComponent},
   {path: 'sponsor-info', component: SponsorInformationComponent},
   {path: 'fees', component: FeesComponent},
