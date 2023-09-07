@@ -1,1 +1,35 @@
-<p>student-information works!</p>
+<div class="row">
+  <div class="pg-head">
+    <h1 class="pg-title">Student List</h1>
+    <button class="add-btn">
+      <i class="bi bi-person-fill-add"></i>
+      <span class="task-name">Add New Student</span>
+    </button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-bg mb-3 shadow border-0 shadow-sm">
+      <div class="card-body">
+        <div class="row">
+          <app-tabs
+            [tabsArray]="tabs"
+            (onTabchange)="tabChange($event)"
+          ></app-tabs>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div *ngIf="activatedTabIndex == 0">
+              <p>This is Student List Panel</p>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div *ngIf="activatedTabIndex == 1">
+              <p>This is Student Category Panel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

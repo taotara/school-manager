@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./student-information.component.css']
 })
 export class StudentInformationComponent {
+  tabs: string[] = ['User List', 'Student Categary'];
 
+  activatedTabIndex: number = 0;
+
+  tabChange(tabIndex:number) {
+    this.activatedTabIndex = tabIndex;
+  }
 }

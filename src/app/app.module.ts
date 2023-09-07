@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgChartsModule } from 'ng2-charts';
 import 'chartjs-adapter-date-fns';
 import { TeacherInformationComponent } from './teacher-information/teacher-information.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { TeacherInformationComponent } from './teacher-information/teacher-infor
     MessageComponent,
     HeaderComponent,
     TeacherInformationComponent,
+    TabsComponent,
   ],
   imports: [
     BrowserModule,
