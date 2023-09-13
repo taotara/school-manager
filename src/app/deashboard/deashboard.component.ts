@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { FacilityComponent } from 'app/facility/facility.component';
+import { NewStudentComponent } from 'app/students/new-student/new-student.component';
 
 @Component({
   selector: 'app-deashboard',
@@ -11,7 +11,9 @@ export class DeashboardComponent {
   constructor(private modalService: NgbModal) {}
 
   openModal() {
-    const modalRef = this.modalService.open(FacilityComponent);
+    const modalRef = this.modalService.open(NewStudentComponent, {
+      size: 'xl',
+    });
     modalRef.componentInstance.name = 'World';
   }
 
