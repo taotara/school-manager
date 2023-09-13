@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FacilityComponent } from 'app/facility/facility.component';
 
 @Component({
   selector: 'app-deashboard',
@@ -6,8 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./deashboard.component.css'],
 })
 export class DeashboardComponent {
-  
-  
+  constructor(private modalService: NgbModal) {}
+
+  openModal() {
+    const modalRef = this.modalService.open(FacilityComponent);
+    modalRef.componentInstance.name = 'World';
+  }
+
+  closeModal() {
+    const modalDiv = document.getElementById('exampleModal');
+    if (modalDiv != null) {
+      modalDiv.style.display = 'none';
+    }
+  }
 
   barChartData = {
     labels: [

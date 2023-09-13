@@ -25,6 +25,7 @@ import { NgChartsModule } from 'ng2-charts';
 import 'chartjs-adapter-date-fns';
 import { TeacherInformationComponent } from './teacher-information/teacher-information.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -55,6 +56,7 @@ import { TabsComponent } from './tabs/tabs.component';
     CdkMenuModule,
     BrowserAnimationsModule,
     NgChartsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
