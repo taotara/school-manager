@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import 'chartjs-adapter-date-fns';
 
 @Component({
   selector: 'app-deashboard',
@@ -7,6 +6,9 @@ import 'chartjs-adapter-date-fns';
   styleUrls: ['./deashboard.component.css'],
 })
 export class DeashboardComponent {
+  
+  
+
   barChartData = {
     labels: [
       '2023-09-01',

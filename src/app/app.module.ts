@@ -26,6 +26,8 @@ import 'chartjs-adapter-date-fns';
 import { TeacherInformationComponent } from './teacher-information/teacher-information.component';
 import { TabsComponent } from './tabs/tabs.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
