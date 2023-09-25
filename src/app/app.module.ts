@@ -1,5 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CdkMenuModule } from '@angular/cdk/menu';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgChartsModule } from 'ng2-charts';
+import 'chartjs-adapter-date-fns';
+import { TeacherInformationComponent } from './teachers/teacher-information/teacher-information.component';
+import { TabsComponent } from './tabs/tabs.component';
+import {
+  NgbModule,
+  NgbDatepickerModule,
+  NgbAlertModule,
+} from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+import { NewStudentComponent } from './students/new-student/new-student.component';
+import { FormsModule } from '@angular/forms';
+import { JsonPipe } from '@angular/common';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,16 +34,8 @@ import { FacilityComponent } from './facility/facility.component';
 import { SettingsComponent } from './settings/settings.component';
 import { MessageComponent } from './message/message.component';
 import { HeaderComponent } from './header/header.component';
+import { StudentsListComponent } from './students/students-list/students-list.component';
 
-import { OverlayModule } from '@angular/cdk/overlay';
-import { CdkMenuModule } from '@angular/cdk/menu';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgChartsModule } from 'ng2-charts';
-import 'chartjs-adapter-date-fns';
-import { TeacherInformationComponent } from './teachers/teacher-information/teacher-information.component';
-import { TabsComponent } from './tabs/tabs.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NewStudentComponent } from './students/new-student/new-student.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +66,12 @@ import { NewStudentComponent } from './students/new-student/new-student.componen
     BrowserAnimationsModule,
     NgChartsModule,
     NgbModule,
+    NgbDatepickerModule,
+    FormsModule,
+    JsonPipe,
+    NgbAlertModule,
+    StudentsListComponent,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
