@@ -1,0 +1,48 @@
+<div class="student-report">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body">
+          <div class="table-container">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                    <td rowspan="2" class="report-heading">Subject</td>
+                    <td colspan="2" class="report-heading">Exam</td>
+                    <td colspan="2" class="report-heading">Class Test</td>
+                    <td colspan="2" class="report-heading">Assignment</td>
+                    <td colspan="3" class="report-heading">Total</td>
+                </tr>
+                <tr>
+                  <td scope="col" class="report-subheading">Obt. Mark</td>
+                  <td scope="col" class="report-subheading">Max Mark</td>
+                  <td scope="col" class="report-subheading">Obt. Mark</td>
+                  <td scope="col" class="report-subheading">Max Mark</td>
+                  <td scope="col" class="report-subheading">Obt. Mark</td>
+                  <td scope="col" class="report-subheading">Max Mark</td>
+                  <td scope="col" class="report-subheading">Mark</td>
+                  <td scope="col" class="report-subheading">Point</td>
+                  <td scope="col" class="report-subheading">Grade</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let report of reports; index as i">
+                  <td scope="row">{{ report.subject }}</td>
+                  <td>{{ report.examObtMark }}</td>
+                  <td>{{ report.examMaxMark }}</td>
+                  <td>{{ report.testObtMark }}</td>
+                  <td>{{ report.testMaxMark }}</td>
+                  <td>{{ report.assignmentObtMark }}</td>
+                  <td>{{ report.assignmentMaxMark }}</td>
+                  <td>{{ report.examObtMark + report.testMaxMark + report.assignmentObtMark }}</td>
+                  <td>{{ report.paymentDate }}</td>
+                  <td>{{ report.discount }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

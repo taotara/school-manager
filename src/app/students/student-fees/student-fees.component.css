@@ -1,0 +1,26 @@
+.student-fees{
+    font-size: 0.75rem;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.status {
+    padding: 3px 5px;
+    color: white;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.pending {
+    background-color: rgba(255,26,104,0.5);
+}
+
+.partial {
+    background-color: rgba(255,206,86,0.5);
+}
+
+.paid {
+    background-color: rgba(75,192,192,0.5);
+}

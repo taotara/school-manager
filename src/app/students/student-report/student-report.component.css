@@ -1,0 +1,13 @@
+.student-report{
+    font-size: 0.75rem;
+}
+
+.report-heading {
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+}
+
+.report-subheading {
+    text-align: center;
+}

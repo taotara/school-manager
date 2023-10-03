@@ -1,0 +1,257 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Edit Student</h4>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="activeModal.close('Close click')"
+  ></button>
+</div>
+<div class="modal-body">
+  <div class="edit-student">
+    <form>
+    <h5 class="form-subheading">Student Information</h5>
+    <div class="row">
+      <div class="col-md-4">
+        <label for="surename" class="form-label"
+          >Surname<span class="text-danger">*</span></label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="surname"
+          aria-describedby="inputGroupPrepend"
+          required
+          value="Otegbeye"
+        />
+        <div class="invalid-feedback">Please choose a username.</div>
+      </div>
+      <div class="col-md-4">
+        <label for="fname" class="form-label"
+          >First Name<span class="text-danger">*</span></label
+        >
+        <input type="text" class="form-control" id="fname" value="Micheal" />
+      </div>
+      <div class="col-md-4">
+        <label for="oname" class="form-label"
+          >Other Name<span class="text-danger">*</span></label
+        >
+        <input type="text" class="form-control" id="oname" value="Adebayo " />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <label for="gender" class="form-label"
+          >Gender<span class="text-danger">*</span></label
+        >
+        <select
+          class="form-select form-select"
+          aria-label="Small select example"
+          id="gender"
+        >
+          <option selected>Select</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label for="dob" class="form-label"
+          >Date of Birth<span class="text-danger">*</span></label
+        >
+        <div class="input-group">
+          <input
+            class="form-control"
+            placeholder="yyyy-mm-dd"
+            id="dob"
+            [(ngModel)]="model"
+            ngbDatepicker
+            #d="ngbDatepicker"
+            value="2023-09-15"
+          />
+          <button
+            class="btn btn-outline-secondary bi bi-calendar3"
+            (click)="d.toggle()"
+            type="button"
+          ></button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="religion" class="form-label"
+          >Religion<span class="text-danger">*</span></label
+        >
+        <select
+          class="form-select form-select"
+          aria-label="Small select example"
+          name="religion"
+        >
+          <option selected>Select</option>
+          <option value="male">Christianity</option>
+          <option value="female">Islam</option>
+          <option value="female">Others</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <label for="address" class="form-label"
+          >Address<span class="text-danger">*</span></label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="address"
+          aria-describedby="inputGroupPrepend"
+          required
+        />
+        <div class="invalid-feedback">Please choose a username.</div>
+      </div>
+      <div class="col-md-4">
+        <label for="fname" class="form-label"
+          >First Name<span class="text-danger">*</span></label
+        >
+        <input type="text" class="form-control" id="fname" />
+      </div>
+      <div class="col-md-4">
+        <label for="oname" class="form-label"
+          >Other Name<span class="text-danger">*</span></label
+        >
+        <input type="text" class="form-control" id="oname" />
+      </div>
+    </div>
+    <h5 class="form-subheading">Medical Detail</h5>
+    <div class="row">
+      <div class="col-md-4">
+        <label for="height" class="form-label"
+          >Height<span class="text-danger">*</span></label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="height"
+          aria-describedby="inputGroupPrepend"
+          required
+        />
+      </div>
+      <div class="col-md-4">
+        <label for="Weight" class="form-label"
+          >Weight<span class="text-danger">*</span></label
+        >
+        <input type="text" class="form-control" id="Weight" />
+      </div>
+      <div class="col-md-4">
+        <label for="bloodgrp" class="form-label"
+          >Blood Group<span class="text-danger">*</span></label
+        >
+        <select
+          class="form-select form-select"
+          aria-label="Small select example"
+          name="bloodgrp"
+        >
+          <option selected>Select</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <label for="bloodgrp" class="form-label"
+          >Blood Group<span class="text-danger">*</span></label
+        >
+        <select
+          class="form-select form-select"
+          aria-label="Small select example"
+          name="bloodgrp"
+        >
+          <option selected>Select</option>
+          <option value="AA">AA</option>
+          <option value="AO">AO</option>
+          <option value="BB">BB</option>
+          <option value="BO">BO</option>
+          <option value="AB">AB</option>
+          <option value="OO">OO</option>
+        </select>
+      </div>
+      <div class="col-md-8">
+        <label for="height" class="form-label"
+          >Have you been immunized againt<span class="text-danger"
+            >*</span
+          ></label
+        >
+        <div class="form-check mt-3">
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="polio"
+              value="polio"
+            />
+            <label class="form-check-label" for="polio">Polio</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="measles"
+              value="measles"
+            />
+            <label class="form-check-label" for="measles">Measles</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="whoopingCough"
+              value="whooping cough"
+            />
+            <label class="form-check-label" for="whoopingCough"
+              >Whooping cough</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="maleria"
+              value="Maleria"
+            />
+            <label class="form-check-label" for="maleria"
+              >Maleria</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="tetanus"
+              value="Tetanus"
+            />
+            <label class="form-check-label" for="tetanus"
+              >Tetanus</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="others"
+              value="Others"
+            />
+            <label class="form-check-label" for="others"
+              >Others</label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <h5 class="form-subheading">Parent/Guardian Detail</h5>
+  </form>
+  </div>
+</div>
+

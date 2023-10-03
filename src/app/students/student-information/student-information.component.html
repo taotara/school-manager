@@ -1,7 +1,8 @@
+<div class="student-info">
 <div class="row">
   <div class="pg-head">
     <h1 class="pg-title">Student List</h1>
-    <button class="add-btn" (click)="openModal()">
+    <button class="add-btn" (click)="openNewStudentModal()">
       <i class="bi bi-person-fill-add"></i>
       <span class="task-name">Add New Student</span>
     </button>
@@ -25,11 +26,27 @@
           </div>
           <div class="col-md-12">
             <div *ngIf="activatedTabIndex == 1">
-              <p>This is Student Category Panel</p>
+              <app-student-categories></app-student-categories>
             </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div *ngIf="activatedTabIndex == 2">
+            <p>This is Fees Panel</p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div *ngIf="activatedTabIndex == 3">
+            <p>This is Exams Panel</p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div *ngIf="activatedTabIndex == 4">
+            <p>This is Attendance Panel</p>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>

@@ -2,15 +2,14 @@ import { Injectable, PipeTransform } from '@angular/core';
 
 import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
 
-import { Country } from './country';
-import { COUNTRIES } from './countries';
+import { Student } from '../../../assets/data/student';
+import { STUDENTS } from '../../../assets/data/students';
 import { DecimalPipe } from '@angular/common';
 import { debounceTime, delay, switchMap, tap } from 'rxjs/operators';
 import { SortColumn, SortDirection } from './sortable.directive';
 
-
 interface SearchResult {
-  countries: Country[];
+  students: Student[];
   total: number;
 }
 
@@ -26,35 +25,33 @@ const compare = (v1: string | number, v2: string | number) =>
   v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
 
 function sort(
-  countries: Country[],
+  students: Student[],
   column: SortColumn,
   direction: string
-): Country[] {
+): Student[] {
   if (direction === '' || column === '') {
-    return countries;
+    return students;
   } else {
-    return [...countries].sort((a, b) => {
+    return [...students].sort((a, b) => {
       const res = compare(a[column], b[column]);
       return direction === 'asc' ? res : -res;
     });
   }
 }
 
-function matches(country: Country, term: string, pipe: PipeTransform) {
-  return (
-    country.name.toLowerCase().includes(term.toLowerCase()) ||
-    pipe.transform(country.area).includes(term) ||
-    pipe.transform(country.population).includes(term)
-  );
+function matches(student: Student, term: string, pipe: PipeTransform) {
+  return student.name.toLowerCase().includes(term.toLowerCase());
+  // pipe.transform(student.telephone).includes(term) ||
+  // pipe.transform(student.population).includes(term)
 }
 
 @Injectable({
   providedIn: 'root',
 })
-export class CountryService {
+export class StudentService {
   private _loading$ = new BehaviorSubject<boolean>(true);
   private _search$ = new Subject<void>();
-  private _countries$ = new BehaviorSubject<Country[]>([]);
+  private _students$ = new BehaviorSubject<Student[]>([]);
   private _total$ = new BehaviorSubject<number>(0);
 
   private _state: State = {
@@ -75,15 +72,15 @@ export class CountryService {
         tap(() => this._loading$.next(false))
       )
       .subscribe((result) => {
-        this._countries$.next(result.countries);
+        this._students$.next(result.students);
         this._total$.next(result.total);
       });
 
     this._search$.next();
   }
 
-  get countries$() {
-    return this._countries$.asObservable();
+  get students$() {
+    return this._students$.asObservable();
   }
   get total$() {
     return this._total$.asObservable();
@@ -127,19 +124,19 @@ export class CountryService {
       this._state;
 
     // 1. sort
-    let countries = sort(COUNTRIES, sortColumn, sortDirection);
+    let students = sort(STUDENTS, sortColumn, sortDirection);
 
     // 2. filter
-    countries = countries.filter((country) =>
-      matches(country, searchTerm, this.pipe)
+    students = students.filter((student) =>
+      matches(student, searchTerm, this.pipe)
     );
-    const total = countries.length;
+    const total = students.length;
 
     // 3. paginate
-    countries = countries.slice(
+    students = students.slice(
       (page - 1) * pageSize,
       (page - 1) * pageSize + pageSize
     );
-    return of({ countries, total });
+    return of({ students, total });
   }
 }

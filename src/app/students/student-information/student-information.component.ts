@@ -1,6 +1,6 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { StudentsListComponent } from '../students-list/students-list.component';
+import { NewStudentComponent } from 'app/students/new-student/new-student.component';
 
 @Component({
   selector: 'app-student-information',
@@ -8,7 +8,7 @@ import { StudentsListComponent } from '../students-list/students-list.component'
   styleUrls: ['./student-information.component.css'],
 })
 export class StudentInformationComponent {
-  tabs: string[] = ['Student List', 'Student Categary'];
+  tabs: string[] = ['Student List', 'Student Categaries'];
 
   activatedTabIndex: number = 0;
 
@@ -18,11 +18,11 @@ export class StudentInformationComponent {
 
   constructor(private modalService: NgbModal) {}
 
-  openModal() {
-    // const modalRef = this.modalService.open(NewStudentComponent, {
-    //   size: 'xl',
-    // });
-    // modalRef.componentInstance.name = 'World';
+  openNewStudentModal() {
+    const modalRef = this.modalService.open(NewStudentComponent, {
+      size: 'xl',
+    });
+    modalRef.componentInstance.name = 'World';
   }
 
   closeModal() {

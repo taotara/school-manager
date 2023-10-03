@@ -305,3 +305,9 @@
     background-size: 100%;
     transition: background 0s;
 }
+
+@media only screen and (max-width: 580px) {
+  .head-user-details {
+    display: none;
+  }
+}

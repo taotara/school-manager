@@ -1,0 +1,294 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Student Details</h4>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="activeModal.close('Close click')"
+  ></button>
+</div>
+<div class="modal-body">
+  <div class="view-student">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-bg mb-3 p-3 border-0 shadow-sm">
+          <div class="detail-left">
+            <div class="details-head d-flex">
+              <img
+                src="assets/users/user2.jpg"
+                alt="User Avatar"
+                class="profile-pic"
+              />
+              <div class="details">
+                <h3>Micheal Adebayo Otegbeye</h3>
+                <h5>Admission No <span>02078</span></h5>
+              </div>
+            </div>
+            <div class="details-body">
+              <ul>
+                <li><b>Class</b><span>JSS 2</span></li>
+                <li><b>Section</b><span>A</span></li>
+                <li><b>Gender</b><span>Male</span></li>
+                <li><b>NIN</b><span>00221458756545</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card card-bg mb-3 shadow border-0 shadow-sm">
+          <div class="card-body">
+            <div class="row">
+              <app-tabs
+                [tabsArray]="tabs"
+                (onTabchange)="tabChange($event)"
+              ></app-tabs>
+            </div>
+            <div class="detail-right">
+              <div *ngIf="activatedTabIndex == 0">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="card card-bg mt-3 border-0">
+                      <div class="print-card d-flex justify-content-end">
+                        <button class="btn btn-print" ngbTooltip="Copy">
+                          <i class="bi bi-clipboard"></i>
+                        </button>
+                        <button class="btn btn-print" ngbTooltip="Excel">
+                          <i class="bi bi-file-earmark-excel"></i>
+                        </button>
+                        <button class="btn btn-print" ngbTooltip="CSV">
+                          <i class="bi bi-filetype-csv"></i>
+                        </button>
+                        <button class="btn btn-print" ngbTooltip="PDF">
+                          <i class="bi bi-filetype-pdf"></i>
+                        </button>
+                        <button class="btn btn-print" ngbTooltip="Print">
+                          <i class="bi bi-printer"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="div-table-row d-flex justify-content-between">
+                  <div class="div-table-cell">Admission Date</div>
+                  <div class="div-table-cell">04/01/2023</div>
+                </div>
+                <div class="div-table-row d-flex justify-content-between">
+                  <div class="div-table-cell">Date Of Birth</div>
+                  <div class="div-table-cell">07/16/2010</div>
+                </div>
+                <div class="div-table-row d-flex justify-content-between">
+                  <div class="div-table-cell">Category</div>
+                  <div class="div-table-cell">General</div>
+                </div>
+                <div class="div-table-row d-flex justify-content-between">
+                  <div class="div-table-cell">Mobile Number</div>
+                  <div class="div-table-cell">9522125476</div>
+                </div>
+                <div class="div-table-row d-flex justify-content-between">
+                  <div class="div-table-cell">Religion</div>
+                  <div class="div-table-cell">Islam</div>
+                </div>
+                <div class="div-table-row d-flex justify-content-between">
+                  <div class="div-table-cell">Email</div>
+                  <div class="div-table-cell">9522125476</div>
+                </div>
+                <div class="div-table-row d-flex justify-content-between">
+                  <div class="div-table-cell">Mobile Number</div>
+                  <div class="div-table-cell">name@mail.com</div>
+                </div>
+                <div class="div-table-row d-flex justify-content-between">
+                  <div class="div-table-cell">Mobile Number</div>
+                  <div class="div-table-cell">9522125476</div>
+                </div>
+                <div class="div-table-row d-flex justify-content-between">
+                  <div class="div-table-cell">Address</div>
+                  <div class="div-table-cell">
+                    6, Mojidi Street, Ikeja, Lagos State, Nigeria
+                  </div>
+                </div>
+                <div class="card card-bg mb-3 shadow border-0 shadow-sm">
+                  <div class="card-header"><h5>Parent Guardian Detail</h5></div>
+                  <div class="card-body">
+                    <div class="detail-right">
+                      <div class="parent d-flex justify-content-between">
+                        <div class="parent-details flex-grow-1">
+                          <div
+                            class="div-table-row d-flex justify-content-between"
+                          >
+                            <div class="div-table-cell">Father Name</div>
+                            <div class="div-table-cell">Otegbeye S. O.</div>
+                          </div>
+                          <div
+                            class="div-table-row d-flex justify-content-between"
+                          >
+                            <div class="div-table-cell">Father Phone</div>
+                            <div class="div-table-cell">849401561</div>
+                          </div>
+                          <div
+                            class="div-table-row d-flex justify-content-between"
+                          >
+                            <div class="div-table-cell">Father Email</div>
+                            <div class="div-table-cell">father@mail.com</div>
+                          </div>
+                          <div
+                            class="div-table-row d-flex justify-content-between"
+                          >
+                            <div class="div-table-cell">Father Occupation</div>
+                            <div class="div-table-cell">Doctor</div>
+                          </div>
+                        </div>
+                        <div class="div-table-cell">
+                          <img
+                            src="assets/users/user.jpg"
+                            alt="Guardian"
+                            class="guardian-pic"
+                          />
+                        </div>
+                      </div>
+                      <div class="parent d-flex justify-content-between">
+                        <div class="parent-details flex-grow-1">
+                          <div
+                            class="div-table-row d-flex justify-content-between"
+                          >
+                            <div class="div-table-cell">Mother Name</div>
+                            <div class="div-table-cell">Otegbeye M. D.</div>
+                          </div>
+                          <div
+                            class="div-table-row d-flex justify-content-between"
+                          >
+                            <div class="div-table-cell">Mother Phone</div>
+                            <div class="div-table-cell">849401561</div>
+                          </div>
+                          <div
+                            class="div-table-row d-flex justify-content-between"
+                          >
+                            <div class="div-table-cell">Mother Email</div>
+                            <div class="div-table-cell">mother@mail.com</div>
+                          </div>
+                          <div
+                            class="div-table-row d-flex justify-content-between"
+                          >
+                            <div class="div-table-cell">Mother Occupation</div>
+                            <div class="div-table-cell">Accountant</div>
+                          </div>
+                        </div>
+                        <div class="div-table-cell">
+                          <img
+                            src="assets/users/user3.jpg"
+                            alt="Guardian"
+                            class="guardian-pic"
+                          />
+                        </div>
+                      </div>
+                      <div class="parent d-flex justify-content-between">
+                        <div class="parent-details flex-grow-1">
+                          <div
+                            class="div-table-row d-flex justify-content-between"
+                          >
+                            <div class="div-table-cell">Guardian Name</div>
+                            <div class="div-table-cell">Ajalekoko T. O.</div>
+                          </div>
+                          <div
+                            class="div-table-row d-flex justify-content-between"
+                          >
+                            <div class="div-table-cell">Guardian Phone</div>
+                            <div class="div-table-cell">849401561</div>
+                          </div>
+                          <div
+                            class="div-table-row d-flex justify-content-between"
+                          >
+                            <div class="div-table-cell">Guardian Email</div>
+                            <div class="div-table-cell">guardian@mail.com</div>
+                          </div>
+                          <div
+                            class="div-table-row d-flex justify-content-between"
+                          >
+                            <div class="div-table-cell">
+                              Guardian Occupation
+                            </div>
+                            <div class="div-table-cell">Architech</div>
+                          </div>
+                        </div>
+                        <div class="div-table-cell">
+                          <img
+                            src="assets/users/user2.jpg"
+                            alt="Guardian"
+                            class="guardian-pic"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="div-table-row d-flex justify-content-between">
+                        <div class="div-table-cell">Mobile Number</div>
+                        <div class="div-table-cell">9522125476</div>
+                      </div>
+                      <div class="div-table-row d-flex justify-content-between">
+                        <div class="div-table-cell">Religion</div>
+                        <div class="div-table-cell">Islam</div>
+                      </div>
+                      <div class="div-table-row d-flex justify-content-between">
+                        <div class="div-table-cell">Email</div>
+                        <div class="div-table-cell">9522125476</div>
+                      </div>
+                      <div class="div-table-row d-flex justify-content-between">
+                        <div class="div-table-cell">Mobile Number</div>
+                        <div class="div-table-cell">name@mail.com</div>
+                      </div>
+                      <div class="div-table-row d-flex justify-content-between">
+                        <div class="div-table-cell">Mobile Number</div>
+                        <div class="div-table-cell">9522125476</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-bg mb-3 shadow border-0 shadow-sm">
+                  <div class="card-header"><h5>Miscellaneous Details</h5></div>
+                  <div class="card-body">
+                    <div class="detail-right">
+                      <div class="div-table-row d-flex justify-content-between">
+                        <div class="div-table-cell">Blood Group</div>
+                        <div class="div-table-cell">O+</div>
+                      </div>
+                      <div class="div-table-row d-flex justify-content-between">
+                        <div class="div-table-cell">House</div>
+                        <div class="div-table-cell">Red House</div>
+                      </div>
+                      <div class="div-table-row d-flex justify-content-between">
+                        <div class="div-table-cell">Height</div>
+                        <div class="div-table-cell">175.25 cm</div>
+                      </div>
+                      <div class="div-table-row d-flex justify-content-between">
+                        <div class="div-table-cell">Weight</div>
+                        <div class="div-table-cell">85 Kg</div>
+                      </div>
+                      <div class="div-table-row d-flex justify-content-between">
+                        <div class="div-table-cell">Measurement Date</div>
+                        <div class="div-table-cell">03/29/2023</div>
+                      </div>
+                      <div class="div-table-row d-flex justify-content-between">
+                        <div class="div-table-cell">
+                          Previous School Details
+                        </div>
+                        <div class="div-table-cell">Mid School</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="activatedTabIndex == 1">
+                <app-student-fees></app-student-fees>
+              </div>
+              <div *ngIf="activatedTabIndex == 2">
+                <app-student-report></app-student-report>
+              </div>
+              <div *ngIf="activatedTabIndex == 3">
+                <app-student-attendance></app-student-attendance>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

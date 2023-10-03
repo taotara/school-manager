@@ -136,4 +136,84 @@ export class DeashboardComponent {
       },
     },
   };
+
+  incomeChartData = {
+    labels: ['Tuition', 'Donation', 'Book Sale', 'Uniform Sale'],
+    datasets: [
+      {
+        data: [80, 70, 20, 25],
+        label: 'Fee Collection',
+        backgroundColor: [
+          'rgba(255,26,104,0.5)',
+          'rgba(54,162,235,0.5)',
+          'rgba(255,206,86,0.5)',
+          'rgba(75,192,192,0.5)',
+          'rgba(153,102,255,0.5)',
+          'rgba(255,159,64,0.5)',
+          'rgba(228,34,215,0.5)',
+          'rgba(24,18,212,0.5)',
+        ],
+        borderWidth: 1,
+        cutout: '60%',
+        circumference: 180,
+        rotation: 270,
+        tension: 0.3,
+      },
+    ],
+  };
+
+  incomeChartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+
+    options: {
+      height: '100%',
+      animations: {},
+    },
+  };
+
+  expenseChartData = {
+    labels: [
+      'Rent',
+      'Stationery',
+      'Electricity Bill',
+      'Telephone Bill',
+      'Internet',
+      'Fuel',
+      'Miscellaneous',
+    ],
+    datasets: [
+      {
+        data: [80, 70, 25, 45, 50, 80, 70],
+        label: 'Fee Collection',
+        backgroundColor: [
+          'rgba(255,26,104,0.5)',
+          'rgba(54,162,235,0.5)',
+          'rgba(255,206,86,0.5)',
+          'rgba(75,192,192,0.5)',
+          'rgba(153,102,255,0.5)',
+          'rgba(255,159,64,0.5)',
+          'rgba(228,34,215,0.5)',
+          'rgba(24,18,212,0.5)',
+        ],
+        borderWidth: 1,
+        cutout: '60%',
+        circumference: 180,
+        rotation: 270,
+        tension: 0.3,
+      },
+    ],
+
+    // plugins: [expenseTotal],
+  };
+
+  expenseChartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+
+    options: {
+      height: '100%',
+      animations: {},
+    },
+  };
 }

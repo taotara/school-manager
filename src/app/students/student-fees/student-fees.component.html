@@ -1,0 +1,49 @@
+<div class="student-fees">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card border-0 shadow-sm">
+        <!-- <div class="card-header"><h5>Fees</h5></div> -->
+        <div class="card-body">
+          <div class="table-container">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Code</th>
+                  <th scope="col">Due Date</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Amount (N)</th>
+                  <th scope="col">Paid (N)</th>
+                  <th scope="col">Payment ID</th>
+                  <th scope="col">Mode</th>
+                  <th scope="col">Payment Date</th>
+                  <th scope="col">Discount (N)</th>
+                  <th scope="col">Balance (N)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let fee of fees; index as i">
+                  <td scope="row">{{ fee.name }}</td>
+                  <td>{{ fee.code }}</td>
+                  <td>{{ fee.dueDate }}</td>
+                  <td><span class="status" [ngClass]="{
+                    'pending': fee.status === 'pending',
+                    'partial': fee.status === 'partial',
+                    'paid': fee.status === 'paid'
+                  }">{{ fee.status }}</span></td>
+                  <td>{{ fee.amount }}</td>
+                  <td>{{ fee.paid }}</td>
+                  <td>{{ fee.paymentId }}</td>
+                  <td>{{ fee.mode }}</td>
+                  <td>{{ fee.paymentDate }}</td>
+                  <td>{{ fee.discount }}</td>
+                  <td>{{ fee.amount - (fee.paid + fee.discount) }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

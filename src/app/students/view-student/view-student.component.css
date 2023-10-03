@@ -1,0 +1,71 @@
+.view-student {
+    font-size: 0.75rem;
+}
+.modal-body {
+    background-color: var(--color-main-bg);
+}
+.details-head img {
+    height: 75px;
+    /* border: 5px solid var(--color-primary); */
+    border-radius: 5px;
+    filter: drop-shadow(2px 2px 2px #00000083);
+    margin-right: 15px;
+    border: 5px solid white;
+    filter: drop-shadow(1px 1px 5px #0000003a);
+}
+
+.details h3 {
+    font-size: 1.3rem;
+}
+
+.details h5 {
+    font-size: 1.1rem;
+}
+
+.details h5 span {
+    color: var(--color-primary);
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+.details-body ul {
+    list-style: none;
+    padding-left:0;
+}
+
+.details-body ul li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-body ul li:hover {
+    background-color: #F8F7F7;
+}
+
+.details-body ul li span {
+    text-align: right;
+    color: var(--color-primary);
+}
+
+.div-table-row {
+    padding: 10px 5px;
+}
+
+.div-table-row:hover {
+    background-color: #F8F7F7;
+}
+
+.guardian-pic {
+    height: 85px;
+    border-radius: 5px;
+    margin-left: 20px;
+    border: 5px solid white;
+    filter: drop-shadow(1px 1px 5px #0000003a);
+}
+
+.btn-print {
+    padding: 3px;
+    font-size: 15px;
+}

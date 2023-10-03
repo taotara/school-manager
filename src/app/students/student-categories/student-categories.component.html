@@ -1,0 +1,108 @@
+<div class="student-categories">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card border-0 shadow-sm">
+        <div class="card-header"><h5>New Categories</h5></div>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-12 mb-5">
+                <label for="category" class="form-label"
+                  >Category<span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="category"
+                  aria-describedby="inputGroupPrepend"
+                  required
+                />
+              </div>
+              <div class="col-12 d-flex justify-content-end">
+                <button type="submit" class="btn btn-submit">Save</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card border-0 shadow-sm">
+        <div class="card-header"><h5>Category list</h5></div>
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Category ID</th>
+                <th scope="col">Category</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let category of categories; index as i">
+                <th scope="row">{{ category.categoryId }}</th>
+                <td>
+                  {{ category.categoryName }}
+                </td>
+                <td>
+                    <button class="btn" ngbTooltip="Edit Category" (click)="open(editCategory)"><i class="bi bi-pencil-square"></i></button>
+                    <button class="btn" ngbTooltip="Delete Category" (click)="openD(deleteCategory)"><i class="bi bi-trash3"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #editCategory let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Edit Category</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <form>
+            <div class="row">
+              <div class="col-12 mb-5">
+                <label for="category" class="form-label"
+                  >Category<span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="category"
+                  aria-describedby="inputGroupPrepend"
+                  required
+                  value="General"
+                />
+              </div>
+              <div class="col-12 d-flex justify-content-end">
+                <button type="submit" class="btn btn-submit">Save</button>
+              </div>
+            </div>
+          </form>
+  </div>
+</ng-template>
+
+<ng-template #deleteCategory let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Delete Category</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    Are you sure
+  </div>
+</ng-template>

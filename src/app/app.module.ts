@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NewStudentComponent } from './students/new-student/new-student.component';
 import { FormsModule } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
+import { DecimalPipe, NgFor } from '@angular/common';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -35,6 +36,12 @@ import { SettingsComponent } from './settings/settings.component';
 import { MessageComponent } from './message/message.component';
 import { HeaderComponent } from './header/header.component';
 import { StudentsListComponent } from './students/students-list/students-list.component';
+import { ViewStudentComponent } from './students/view-student/view-student.component';
+import { EditStudentComponent } from './students/edit-student/edit-student.component';
+import { StudentCategoriesComponent } from './students/student-categories/student-categories.component';
+import { StudentFeesComponent } from './students/student-fees/student-fees.component';
+import { StudentReportComponent } from './students/student-report/student-report.component';
+import { StudentAttendanceComponent } from './students/student-attendance/student-attendance.component';
 
 
 @NgModule({
@@ -57,6 +64,12 @@ import { StudentsListComponent } from './students/students-list/students-list.co
     TeacherInformationComponent,
     TabsComponent,
     NewStudentComponent,
+    ViewStudentComponent,
+    EditStudentComponent,
+    StudentCategoriesComponent,
+    StudentFeesComponent,
+    StudentReportComponent,
+    StudentAttendanceComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,6 +85,8 @@ import { StudentsListComponent } from './students/students-list/students-list.co
     NgbAlertModule,
     StudentsListComponent,
     HttpClientModule,
+    DecimalPipe,
+    NgFor,
   ],
   providers: [],
   bootstrap: [AppComponent],
