@@ -2,11 +2,14 @@ import { Injectable, PipeTransform } from '@angular/core';
 
 import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
 
-import { Student } from '../../../assets/data/student';
-import { STUDENTS } from '../../../assets/data/students';
+import { Student } from '../../assets/data/student';
+import { STUDENTS } from '../../assets/data/students';
 import { DecimalPipe } from '@angular/common';
 import { debounceTime, delay, switchMap, tap } from 'rxjs/operators';
-import { SortColumn, SortDirection } from './sortable.directive';
+import {
+  SortColumn,
+  SortDirection,
+} from '../students/students-list/sortable.directive';
 
 interface SearchResult {
   students: Student[];
@@ -48,7 +51,7 @@ function matches(student: Student, term: string, pipe: PipeTransform) {
 @Injectable({
   providedIn: 'root',
 })
-export class StudentService {
+export class SponsorService {
   private _loading$ = new BehaviorSubject<boolean>(true);
   private _search$ = new Subject<void>();
   private _students$ = new BehaviorSubject<Student[]>([]);
@@ -56,7 +59,7 @@ export class StudentService {
 
   private _state: State = {
     page: 1,
-    pageSize: 4,
+    pageSize: 5,
     searchTerm: '',
     sortColumn: '',
     sortDirection: '',

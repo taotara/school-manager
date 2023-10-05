@@ -22,7 +22,7 @@ export  const navbarData = [
   {
     routeLink: 'sponsor-info',
     icon: 'bi bi-person-hearts',
-    label: 'Parent Information',
+    label: 'Sponsor Information',
   },
   {
     routeLink: 'fees',

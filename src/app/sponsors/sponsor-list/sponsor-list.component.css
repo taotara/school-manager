@@ -1,0 +1,12 @@
+.sponsor-list, .btn, .form-select {
+    font-size: 0.75rem;
+}
+
+.btn-action {
+    padding: 2px 10px;
+}
+
+.page-txt, .pagination, .page-link {
+    font-size: 0.75rem !important;
+}
+

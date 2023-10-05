@@ -2,9 +2,9 @@ import { AsyncPipe, DecimalPipe, NgFor, NgIf } from '@angular/common';
 import { Component, QueryList, ViewChildren } from '@angular/core';
 import { Observable } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
+import { ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { Student } from '../../../assets/data/student';
-import { StudentService } from './student.service';
+import { StudentService } from '../../services/student.service';
 import { NgbdSortableHeader, SortEvent } from './sortable.directive';
 import { FormsModule } from '@angular/forms';
 import {
@@ -14,10 +14,7 @@ import {
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { ViewStudentComponent } from '../view-student/view-student.component';
 import { EditStudentComponent } from '../edit-student/edit-student.component';
-import {
-  ModalDismissReasons,
-  NgbDatepickerModule,
-} from '@ng-bootstrap/ng-bootstrap';
+
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({

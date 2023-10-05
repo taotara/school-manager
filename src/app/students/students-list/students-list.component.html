@@ -91,33 +91,35 @@
             </td>
             <td>
               <div ngbDropdown class="d-inline-block">
-                <button class="btn" id="actionDrupdown" ngbDropdownToggle ngbTooltip="Actions">
+                <button
+                  class="btn"
+                  id="actionDrupdown"
+                  ngbDropdownToggle
+                  ngbTooltip="Actions"
+                >
                   <i class="bi bi-three-dots-vertical"></i>
                 </button>
                 <div
                   ngbDropdownMenu
                   aria-labelledby="actionDrupdown"
-				  class="action-dropdown"
+                  class="action-dropdown"
                 >
                   <button
                     class="btn"
                     ngbDropdownItem
                     (click)="openStudentDetailsModal()"
                   >
-                    <i class="bi bi-binoculars"></i><span>View Student Record</span>
+                    <i class="bi bi-binoculars"></i
+                    ><span>View Student Record</span>
                   </button>
                   <button
                     class="btn"
                     ngbDropdownItem
                     (click)="openEditStudentModal()"
                   >
-                    <i class="bi bi-pen"></i><span>Edit Student</span> 
+                    <i class="bi bi-pen"></i><span>Edit Student</span>
                   </button>
-                  <button
-                    class="btn"
-                    ngbDropdownItem
-                    (click)="open(content)"
-                  >
+                  <button class="btn" ngbDropdownItem (click)="open(content)">
                     <i class="bi bi-trash3"></i><span>Delete Student</span>
                   </button>
                 </div>
@@ -142,9 +144,9 @@
         name="pageSize"
         [(ngModel)]="service.pageSize"
       >
-        <option [ngValue]="2">2 items per page</option>
-        <option [ngValue]="4">4 items per page</option>
-        <option [ngValue]="6">6 items per page</option>
+        <option [ngValue]="5">5 items per page</option>
+        <option [ngValue]="10">10 items per page</option>
+        <option [ngValue]="20">20 items per page</option>
       </select>
     </div>
   </form>

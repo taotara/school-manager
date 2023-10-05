@@ -17,6 +17,7 @@ import { NewStudentComponent } from './students/new-student/new-student.componen
 import { FormsModule } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
 import { DecimalPipe, NgFor } from '@angular/common';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -42,6 +43,10 @@ import { StudentCategoriesComponent } from './students/student-categories/studen
 import { StudentFeesComponent } from './students/student-fees/student-fees.component';
 import { StudentReportComponent } from './students/student-report/student-report.component';
 import { StudentAttendanceComponent } from './students/student-attendance/student-attendance.component';
+import { SponsorListComponent } from './sponsors/sponsor-list/sponsor-list.component';
+import { ViewSponsorComponent } from './sponsors/view-sponsor/view-sponsor.component';
+import { EditSponsorComponent } from './sponsors/edit-sponsor/edit-sponsor.component';
+import { LinkStudentComponent } from './sponsors/link-student/link-student.component';
 
 
 @NgModule({
@@ -70,6 +75,9 @@ import { StudentAttendanceComponent } from './students/student-attendance/studen
     StudentFeesComponent,
     StudentReportComponent,
     StudentAttendanceComponent,
+    ViewSponsorComponent,
+    EditSponsorComponent,
+    LinkStudentComponent,
   ],
   imports: [
     BrowserModule,
@@ -87,6 +95,8 @@ import { StudentAttendanceComponent } from './students/student-attendance/studen
     HttpClientModule,
     DecimalPipe,
     NgFor,
+    SponsorListComponent,
+    NgSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,102 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Sponsor Details</h4>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="activeModal.close('Close click')"
+  ></button>
+</div>
+<div class="modal-body">
+  <div class="view-student">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-bg mb-3 p-3 border-0 shadow-sm h-100">
+          <div class="detail-left">
+            <div class="details-head d-flex flex-column align-items-center">
+              <img
+                src="assets/users/user.jpg"
+                alt="User Avatar"
+                class="profile-pic"
+              />
+              <div class="details d-flex flex-column align-items-center">
+                <h3>George Wilson</h3>
+                <h5>Relationship <span>Father</span></h5>
+              </div>
+            </div>
+            <!-- <div class="details-body">
+              <ul>
+                <li><b>Email</b><span>father@mail.com</span></li>
+                <li><b>Phone</b><span>849401561</span></li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card card-bg mb-3 shadow border-0 shadow-sm h-100">
+          <div class="card-body">
+            <div class="row">
+              <app-tabs
+                [tabsArray]="tabs"
+                (onTabchange)="tabChange($event)"
+              ></app-tabs>
+            </div>
+            <div class="detail-right">
+              <div *ngIf="activatedTabIndex == 0">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="card card-bg mt-3 border-0">
+                      <div class="print-card d-flex justify-content-end">
+                        <button class="btn btn-print" ngbTooltip="Copy">
+                          <i class="bi bi-clipboard"></i>
+                        </button>
+                        <button class="btn btn-print" ngbTooltip="Excel">
+                          <i class="bi bi-file-earmark-excel"></i>
+                        </button>
+                        <button class="btn btn-print" ngbTooltip="CSV">
+                          <i class="bi bi-filetype-csv"></i>
+                        </button>
+                        <button class="btn btn-print" ngbTooltip="PDF">
+                          <i class="bi bi-filetype-pdf"></i>
+                        </button>
+                        <button class="btn btn-print" ngbTooltip="Print">
+                          <i class="bi bi-printer"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="div-table-row d-flex justify-content-between">
+                  <div class="div-table-cell">Email</div>
+                  <div class="div-table-cell">father@mail.com</div>
+                </div>
+                <div class="div-table-row d-flex justify-content-between">
+                  <div class="div-table-cell">Phone</div>
+                  <div class="div-table-cell">849401561</div>
+                </div>
+                <div class="div-table-row d-flex justify-content-between">
+                  <div class="div-table-cell">Occupation</div>
+                  <div class="div-table-cell">Doctor</div>
+                </div>
+                <div class="div-table-row d-flex justify-content-between">
+                  <div class="div-table-cell">Mobile Number</div>
+                  <div class="div-table-cell">9522125476</div>
+                </div>
+                <div class="div-table-row d-flex justify-content-between">
+                  <div class="div-table-cell">Address</div>
+                  <div class="div-table-cell">
+                    6, Mojidi Street, Ikeja, Lagos State, Nigeria
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="activatedTabIndex == 1">
+                <app-link-student></app-link-student>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

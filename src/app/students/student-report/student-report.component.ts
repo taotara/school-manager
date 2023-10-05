@@ -9,10 +9,11 @@ interface Reports {
   testMaxMark: number;
   assignmentObtMark: number;
   assignmentMaxMark: number;
-  mode: string;
-  paymentDate: string;
-  discount: number;
+  points: number;
+  grade: string;
 }
+
+
 
 const REPORTS: Reports[] = [
   {
@@ -23,9 +24,8 @@ const REPORTS: Reports[] = [
     testMaxMark: 30,
     assignmentObtMark: 9,
     assignmentMaxMark: 10,
-    mode: 'cash',
-    paymentDate: '10/02/2023',
-    discount: 0,
+    points: 5,
+    grade: 'A',
   },
   {
     subject: 'Social Studies',
@@ -35,9 +35,8 @@ const REPORTS: Reports[] = [
     testMaxMark: 30,
     assignmentObtMark: 5,
     assignmentMaxMark: 10,
-    mode: 'transfer',
-    paymentDate: '10/02/2023',
-    discount: 20000,
+    points: 4,
+    grade: 'B',
   },
   {
     subject: 'Catering Craft',
@@ -47,9 +46,8 @@ const REPORTS: Reports[] = [
     testMaxMark: 30,
     assignmentObtMark: 8,
     assignmentMaxMark: 10,
-    mode: 'pos',
-    paymentDate: '10/02/2023',
-    discount: 15000,
+    points: 4,
+    grade: 'B',
   },
   {
     subject: 'Physical And Health Education',
@@ -59,9 +57,8 @@ const REPORTS: Reports[] = [
     testMaxMark: 30,
     assignmentObtMark: 10,
     assignmentMaxMark: 10,
-    mode: '',
-    paymentDate: '10/02/2023',
-    discount: 0,
+    points: 3,
+    grade: 'C',
   },
 ];
 
