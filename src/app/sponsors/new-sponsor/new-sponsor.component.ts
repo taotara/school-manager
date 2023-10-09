@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
 import {
   NgbActiveModal,
-  NgbModalConfig,
   NgbDateStruct,
+  NgbModalConfig,
 } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-edit-sponsor',
-  templateUrl: './edit-sponsor.component.html',
-  styleUrls: ['./edit-sponsor.component.css'],
+  selector: 'app-new-sponsor',
+  templateUrl: './new-sponsor.component.html',
+  styleUrls: ['./new-sponsor.component.css'],
 })
-export class EditSponsorComponent {
+export class NewSponsorComponent {
   constructor(config: NgbModalConfig, public activeModal: NgbActiveModal) {
     config.backdrop = 'static';
     config.keyboard = false;
   }
+
   model!: NgbDateStruct;
 }

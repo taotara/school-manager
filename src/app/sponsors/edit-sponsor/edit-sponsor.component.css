@@ -1,0 +1,24 @@
+.edit-sponsor {
+    font-size: 0.75rem;
+}
+
+form, input, label, .form-select, select {
+    font-size: 0.75rem;
+}
+
+.btn-submit {
+  background: #0977d0;
+  padding: 7px 30px;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.btn-submit:hover {
+  background: #fff;
+  border: 1px solid #0977d0;
+  color: #0977d0;
+}

@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-link-student',
-  templateUrl: './link-student.component.html',
-  styleUrls: ['./link-student.component.css'],
+  selector: 'app-link-sponsor',
+  templateUrl: './link-sponsor.component.html',
+  styleUrls: ['./link-sponsor.component.css'],
 })
-export class LinkStudentComponent {
+export class LinkSponsorComponent {
   selectedStudent!: number;
 
   students = [

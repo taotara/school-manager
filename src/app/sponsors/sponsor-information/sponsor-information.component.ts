@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { NewStudentComponent } from 'app/students/new-student/new-student.component';
+import { NewSponsorComponent } from '../new-sponsor/new-sponsor.component';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { NewStudentComponent } from 'app/students/new-student/new-student.compon
   styleUrls: ['./sponsor-information.component.css'],
 })
 export class SponsorInformationComponent {
-  tabs: string[] = ['Sponsor List', 'Link Student'];
+  tabs: string[] = ['Sponsor List'];
 
   activatedTabIndex: number = 0;
 
@@ -19,8 +19,8 @@ export class SponsorInformationComponent {
 
   constructor(private modalService: NgbModal) {}
 
-  openNewStudentModal() {
-    const modalRef = this.modalService.open(NewStudentComponent, {
+  openNewSponsorModal() {
+    const modalRef = this.modalService.open(NewSponsorComponent, {
       size: 'xl',
     });
     modalRef.componentInstance.name = 'World';

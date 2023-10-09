@@ -47,6 +47,8 @@ import { SponsorListComponent } from './sponsors/sponsor-list/sponsor-list.compo
 import { ViewSponsorComponent } from './sponsors/view-sponsor/view-sponsor.component';
 import { EditSponsorComponent } from './sponsors/edit-sponsor/edit-sponsor.component';
 import { LinkStudentComponent } from './sponsors/link-student/link-student.component';
+import { NewSponsorComponent } from './sponsors/new-sponsor/new-sponsor.component';
+import { LinkSponsorComponent } from './students/link-sponsor/link-sponsor.component';
 
 
 @NgModule({
@@ -78,6 +80,8 @@ import { LinkStudentComponent } from './sponsors/link-student/link-student.compo
     ViewSponsorComponent,
     EditSponsorComponent,
     LinkStudentComponent,
+    NewSponsorComponent,
+    LinkSponsorComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@ import { NewStudentComponent } from 'app/students/new-student/new-student.compon
   styleUrls: ['./student-information.component.css'],
 })
 export class StudentInformationComponent {
-  tabs: string[] = ['Student List', 'Student Categaries'];
+  tabs: string[] = ['Student List', 'Link Sponsor'];
 
   activatedTabIndex: number = 0;
 

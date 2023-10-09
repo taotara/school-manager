@@ -14,11 +14,11 @@
 }
 
 .add-btn {
-  background: #0977d0;
-  padding: 10px 30px;
-  border: none;
-  border-radius: 25px;
-  color: #fff;
+  background: transparent;
+  /* padding: 10px 30px; */
+  /* border: none;
+  border-radius: 25px; */
+  color: var(--color-primary);
   font-size: 1.1rem;
   transition: all 0.2s ease;
   border: 1px solid transparent;
@@ -29,9 +29,9 @@
 }
 
 .add-btn:hover {
-  background: #fff;
-  border: 1px solid #0977d0;
-  color: #0977d0;
+  /* background: #fff;
+  border: 1px solid #0977d0; */
+  color: #212529;
 }
 
 @media only screen and (max-width: 768px) {
